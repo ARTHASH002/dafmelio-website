@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dafmelio Digital Hub | Premium IT Solutions & Smart Security Systems</title>
+<meta name="description" content="Dafmelio Digital Hub – Premium IT infrastructure solutions in Chennai. Laptop Sales, CCTV Installation, Biometric Systems, AMC Services, Software Licensing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #050810;
+    --navy: #080f24;
+    --dark: #0c1530;
+    --card: #111827;
+    --card2: #0f1d3a;
+    --blue: #0e6fff;
+    --blue-bright: #3b8fff;
+    --blue-glow: rgba(14,111,255,0.18);
+    --cyan: #00c6ff;
+    --white: #f5f8ff;
+    --muted: #8494b2;
+    --border: rgba(59,143,255,0.15);
+    --border2: rgba(255,255,255,0.07);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 70px;
+    background: rgba(5,8,16,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border2);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--blue-bright); }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--blue);
+    color: #fff !important;
+    padding: 0.45rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.85rem !important;
+    transition: background 0.2s, transform 0.15s !important;
+  }
+  .nav-cta:hover { background: var(--blue-bright) !important; transform: translateY(-1px); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(14,111,255,0.13) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 10% 80%, rgba(0,198,255,0.07) 0%, transparent 60%);
+  }
+  .grid-lines {
+    position: absolute; inset: 0; z-index: 0;
+    background-image: linear-gradient(rgba(59,143,255,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(59,143,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 700px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(14,111,255,0.12);
+    border: 1px solid rgba(14,111,255,0.3);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--cyan);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+  h1 .accent { color: var(--blue-bright); }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+  }
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--muted);
+    background: rgba(59,143,255,0.05);
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--blue);
+    color: #fff;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    background: var(--blue-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(14,111,255,0.35);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover {
+    border-color: rgba(59,143,255,0.5);
+    background: rgba(59,143,255,0.07);
+    transform: translateY(-2px);
+  }
+  .btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); }
+  .hero-stats {
+    position: relative; z-index: 1;
+    display: flex; gap: 3rem;
+    margin-top: 4rem;
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .stat-num span { color: var(--blue-bright); }
+  .stat-label { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+
+  /* SECTIONS */
+  section { padding: 90px 5%; }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue-bright);
+    margin-bottom: 0.75rem;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  h2 .accent { color: var(--blue-bright); }
+  .section-desc {
+    color: var(--muted);
+    max-width: 580px;
+    margin-top: 0.75rem;
+    font-weight: 300;
+  }
+
+  /* ABOUT */
+  #about {
+    background: var(--navy);
+    border-top: 1px solid var(--border2);
+    border-bottom: 1px solid var(--border2);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .about-text p {
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  .about-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .pillar {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+  }
+  .pillar-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .pillar-title { font-size: 0.85rem; font-weight: 600; }
+  .pillar-sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+  /* SERVICES */
+  #services { background: var(--black); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 3rem;
+  }
+  .service-card {
+    background: var(--card);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 2rem 1.75rem;
+    transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .service-card:hover {
+    border-color: var(--border);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(14,111,255,0.12);
+  }
+  .service-card:hover::before { opacity: 1; }
+  .service-icon {
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    background: rgba(14,111,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(14,111,255,0.2);
+  }
+  .service-title {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  .service-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+  .service-tags {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    margin-top: 1rem;
+  }
+  .stag {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--muted);
+  }
+
+  /* WHY CHOOSE */
+  #why { background: var(--navy); border-top: 1px solid var(--border2); border-bottom: 1px solid var(--border2); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-top: 3rem;
+  }
+  .why-item {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .why-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .why-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .why-sub { font-size: 0.8rem; color: var(--muted); }
+
+  /* PRODUCTS */
+  #products { background: var(--black); }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 3rem;
+  }
+  .product-card {
+    background: var(--card);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 1.75rem;
+    display: flex; align-items: center; gap: 1.25rem;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: default;
+  }
+  .product-card:hover {
+    border-color: var(--border);
+    transform: translateY(-2px);
+  }
+  .prod-icon {
+    font-size: 2.2rem;
+    width: 58px; height: 58px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(14,111,255,0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .prod-name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
+  .prod-sub { font-size: 0.8rem; color: var(--muted); margin-top: 3px; }
+
+  /* BRANDS */
+  #brands { background: var(--navy); border-top: 1px solid var(--border2); border-bottom: 1px solid var(--border2); }
+  .brands-track-wrap {
+    overflow: hidden;
+    margin-top: 3rem;
+    -webkit-mask: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+  .brands-track {
+    display: flex; gap: 2.5rem; align-items: center;
+    animation: scroll-brands 20s linear infinite;
+    width: max-content;
+  }
+  @keyframes scroll-brands {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .brand-pill {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 1.4rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--muted);
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .brand-pill:hover { color: var(--white); border-color: var(--blue); }
+
+  /* INDUSTRIES */
+  #industries { background: var(--black); }
+  .industries-grid {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+  .ind-card {
+    background: var(--card);
+    border: 1px solid var(--border2);
+    border-radius: 10px;
+    padding: 1.1rem 1.5rem;
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ind-card:hover { border-color: var(--border); background: var(--card2); }
+  .ind-card span { font-size: 1.2rem; }
+
+  /* TESTIMONIALS */
+  #testimonials { background: var(--navy); border-top: 1px solid var(--border2); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 3rem;
+  }
+  .testi-card {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.75rem;
+  }
+  .testi-stars { color: #f5c842; font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 2px; }
+  .testi-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; font-style: italic; margin-bottom: 1.25rem; }
+  .testi-author { font-weight: 600; font-size: 0.88rem; }
+  .testi-role { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+  /* CONTACT */
+  #contact {
+    background: var(--black);
+    border-top: 1px solid var(--border2);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+  .contact-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .contact-info p { color: var(--muted); font-weight: 300; margin-bottom: 2rem; }
+  .contact-item {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .contact-item-icon {
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    background: rgba(14,111,255,0.1);
+    border: 1px solid rgba(14,111,255,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .contact-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
+  .contact-form {
+    background: var(--card);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 2rem;
+  }
+  .form-group { margin-bottom: 1.2rem; }
+  label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: var(--muted);
+  }
+  input, select, textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: rgba(14,111,255,0.5);
+  }
+  select option { background: var(--card); }
+  textarea { resize: vertical; min-height: 100px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid var(--border2);
+    padding: 60px 5% 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .footer-brand p { font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.7; }
+  .footer-col h4 {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .footer-col a {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--blue-bright); }
+  .footer-bottom {
+    border-top: 1px solid var(--border2);
+    padding-top: 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* WHATSAPP FLOAT */
+  .wa-float {
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    z-index: 999;
+    text-decoration: none;
+    font-size: 1.6rem;
+    animation: float-bounce 3s ease-in-out infinite;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .wa-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37,211,102,0.55);
+  }
+  @keyframes float-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* COUNTER ANIM */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.22s; }
+  .delay-3 { animation-delay: 0.34s; }
+  .delay-4 { animation-delay: 0.46s; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .services-grid, .products-grid, .testi-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 600px) {
+    .services-grid, .products-grid, .testi-grid, .why-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Dafmelio <span>Digital Hub</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#brands">Brands</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact" class="nav-cta">Get Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-badge fade-up">Chennai's Premier IT Partner</div>
+    <h1 class="fade-up delay-1">Premium IT Solutions &<br><span class="accent">Smart Security</span> Systems</h1>
+    <p class="hero-sub fade-up delay-2">Complete digital infrastructure for businesses, offices &amp; homes across Chennai.</p>
+    <div class="hero-tags fade-up delay-2">
+      <span class="hero-tag">💻 Laptop Sales</span>
+      <span class="hero-tag">📹 CCTV Installation</span>
+      <span class="hero-tag">🔐 Biometric Systems</span>
+      <span class="hero-tag">🛠 IT Support</span>
+      <span class="hero-tag">🧩 Software Licensing</span>
+      <span class="hero-tag">📋 AMC Services</span>
+    </div>
+    <div class="hero-btns fade-up delay-3">
+      <a href="#contact"><button class="btn-primary">Get a Free Quote</button></a>
+      <a href="#services"><button class="btn-outline">Explore Services</button></a>
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><button class="btn-whatsapp">💬 WhatsApp</button></a>
+    </div>
+    <div class="hero-stats fade-up delay-4">
+      <div>
+        <div class="stat-num">500<span>+</span></div>
+        <div class="stat-label">Clients Served</div>
+      </div>
+      <div>
+        <div class="stat-num">8<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-num">24<span>/7</span></div>
+        <div class="stat-label">Support Available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">Who We Are</div>
+  <h2>Your Trusted <span class="accent">IT Infrastructure</span> Partner</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Dafmelio Digital Hub is a premium IT solutions company serving businesses, offices, retail stores, educational institutions, and homes across Chennai.</p>
+      <p>We specialise in laptop sales, CCTV surveillance systems, biometric attendance devices, enterprise networking, software solutions, and annual maintenance contracts.</p>
+      <p>Our team combines technical expertise with fast on-site support to deliver reliable, branded products at competitive pricing — making enterprise-grade technology accessible to every organisation.</p>
+    </div>
+    <div class="about-pillars">
+      <div class="pillar">
+        <div class="pillar-icon">✅</div>
+        <div class="pillar-title">Genuine Products</div>
+        <div class="pillar-sub">Only authorised, branded hardware &amp; software</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">⚡</div>
+        <div class="pillar-title">Fast Support</div>
+        <div class="pillar-sub">Same-day on-site response across Chennai</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏢</div>
+        <div class="pillar-title">Corporate Focus</div>
+        <div class="pillar-sub">Tailored solutions for businesses of all sizes</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🛡</div>
+        <div class="pillar-title">AMC Backed</div>
+        <div class="pillar-sub">Annual maintenance contracts for peace of mind</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What We Offer</div>
+  <h2>Our <span class="accent">Core Services</span></h2>
+  <p class="section-desc">End-to-end IT infrastructure solutions designed for modern businesses.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <div class="service-title">Laptop & Desktop Sales</div>
+      <div class="service-desc">Business laptops, gaming rigs, workstations, custom PC builds, and certified refurbished systems for every budget.</div>
+      <div class="service-tags">
+        <span class="stag">HP</span><span class="stag">Dell</span><span class="stag">Lenovo</span><span class="stag">Apple</span><span class="stag">ASUS</span><span class="stag">Acer</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📹</div>
+      <div class="service-title">CCTV Installation</div>
+      <div class="service-desc">HD, IP &amp; AI cameras with remote mobile monitoring for offices, homes, warehouses, and retail stores.</div>
+      <div class="service-tags">
+        <span class="stag">CP Plus</span><span class="stag">Hikvision</span><span class="stag">HiFocus</span><span class="stag">Dahua</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🖥</div>
+      <div class="service-title">IT Support & AMC</div>
+      <div class="service-desc">Network, system, printer, and server support with remote assistance and comprehensive annual maintenance contracts.</div>
+      <div class="service-tags">
+        <span class="stag">On-site</span><span class="stag">Remote</span><span class="stag">AMC Plans</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔐</div>
+      <div class="service-title">Biometric Solutions</div>
+      <div class="service-desc">Fingerprint &amp; face recognition attendance systems, access control installations for secure offices and institutions.</div>
+      <div class="service-tags">
+        <span class="stag">Attendance</span><span class="stag">Face ID</span><span class="stag">Access Control</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🧩</div>
+      <div class="service-title">Software Licensing</div>
+      <div class="service-desc">Genuine licences for Windows, Microsoft Office, Adobe, AutoCAD, Tally, Antivirus and all major business software.</div>
+      <div class="service-tags">
+        <span class="stag">Microsoft</span><span class="stag">Adobe</span><span class="stag">Tally</span><span class="stag">AutoCAD</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌐</div>
+      <div class="service-title">Networking & Infrastructure</div>
+      <div class="service-desc">Structured cabling, Wi-Fi setup, server installations, firewall configuration and complete office networking solutions.</div>
+      <div class="service-tags">
+        <span class="stag">Wi-Fi</span><span class="stag">Servers</span><span class="stag">Cabling</span><span class="stag">Firewall</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section id="why">
+  <div class="section-label">Why Dafmelio</div>
+  <h2>Reasons Businesses <span class="accent">Trust Us</span></h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon">🏆</div>
+      <div class="why-title">Genuine Products</div>
+      <div class="why-sub">100% authentic branded hardware &amp; software only</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🔧</div>
+      <div class="why-title">Expert Installation</div>
+      <div class="why-sub">Certified technicians with deep field experience</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">⚡</div>
+      <div class="why-title">Fast Technical Support</div>
+      <div class="why-sub">Quick response time — on-site or remote</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">💰</div>
+      <div class="why-title">Affordable Pricing</div>
+      <div class="why-sub">Competitive rates with transparent quotations</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🏢</div>
+      <div class="why-title">Corporate Service</div>
+      <div class="why-sub">Professional documentation &amp; B2B solutions</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">✅</div>
+      <div class="why-title">Trusted Brands</div>
+      <div class="why-sub">Authorised reseller of top global brands</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🚗</div>
+      <div class="why-title">On-Site Service</div>
+      <div class="why-sub">We come to your office or home in Chennai</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">📋</div>
+      <div class="why-title">AMC Support</div>
+      <div class="why-sub">Annual contracts for worry-free operations</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-label">Product Range</div>
+  <h2>Our <span class="accent">Product Categories</span></h2>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="prod-icon">💻</div>
+      <div>
+        <div class="prod-name">Laptops & Desktops</div>
+        <div class="prod-sub">HP, Dell, Lenovo, Apple, ASUS, Acer</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="prod-icon">📹</div>
+      <div>
+        <div class="prod-name">CCTV Cameras</div>
+        <div class="prod-sub">Dome, Bullet, PTZ, IP, AI cameras</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="prod-icon">🖥</div>
+      <div>
+        <div class="prod-name">NVR / DVR Systems</div>
+        <div class="prod-sub">4-channel to 64-channel recording</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="prod-icon">🔐</div>
+      <div>
+        <div class="prod-name">Biometric Devices</div>
+        <div class="prod-sub">Fingerprint, face, card &amp; PIN attendance</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="prod-icon">🖨</div>
+      <div>
+        <div class="prod-name">Printers & Scanners</div>
+        <div class="prod-sub">Canon, Epson, HP, Ricoh, Kyocera</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="prod-icon">🌐</div>
+      <div>
+        <div class="prod-name">Networking Devices</div>
+        <div class="prod-sub">Routers, switches, access points, servers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands">
+  <div class="section-label">Brands We Carry</div>
+  <h2>Authorised <span class="accent">Brand Partners</span></h2>
+  <div class="brands-track-wrap">
+    <div class="brands-track">
+      <span class="brand-pill">HP</span>
+      <span class="brand-pill">Dell</span>
+      <span class="brand-pill">Lenovo</span>
+      <span class="brand-pill">Apple</span>
+      <span class="brand-pill">ASUS</span>
+      <span class="brand-pill">Acer</span>
+      <span class="brand-pill">CP Plus</span>
+      <span class="brand-pill">Hikvision</span>
+      <span class="brand-pill">Dahua</span>
+      <span class="brand-pill">HiFocus</span>
+      <span class="brand-pill">Canon</span>
+      <span class="brand-pill">Epson</span>
+      <span class="brand-pill">Microsoft</span>
+      <span class="brand-pill">Adobe</span>
+      <!-- duplicate for seamless loop -->
+      <span class="brand-pill">HP</span>
+      <span class="brand-pill">Dell</span>
+      <span class="brand-pill">Lenovo</span>
+      <span class="brand-pill">Apple</span>
+      <span class="brand-pill">ASUS</span>
+      <span class="brand-pill">Acer</span>
+      <span class="brand-pill">CP Plus</span>
+      <span class="brand-pill">Hikvision</span>
+      <span class="brand-pill">Dahua</span>
+      <span class="brand-pill">HiFocus</span>
+      <span class="brand-pill">Canon</span>
+      <span class="brand-pill">Epson</span>
+      <span class="brand-pill">Microsoft</span>
+      <span class="brand-pill">Adobe</span>
+    </div>
+  </div>
+
+  <div style="margin-top:3rem;">
+    <div class="section-label">Industries We Serve</div>
+    <div class="industries-grid">
+      <div class="ind-card"><span>🏢</span> Corporate Offices</div>
+      <div class="ind-card"><span>🏫</span> Schools &amp; Colleges</div>
+      <div class="ind-card"><span>🏥</span> Hospitals &amp; Clinics</div>
+      <div class="ind-card"><span>🏭</span> Warehouses &amp; Factories</div>
+      <div class="ind-card"><span>🛍</span> Retail Stores</div>
+      <div class="ind-card"><span>🏘</span> Apartments &amp; Housing</div>
+      <div class="ind-card"><span>🏦</span> Banks &amp; Finance</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-label">Client Reviews</div>
+  <h2>What Our <span class="accent">Clients Say</span></h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">"Professional CCTV installation done within a day. The team was punctual and the remote monitoring setup works flawlessly. Highly recommended for office security."</div>
+      <div class="testi-author">Ramesh Kumar</div>
+      <div class="testi-role">Director, RK Trading Co, Chennai</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">"Best pricing for laptops in Chennai. Got 10 Dell laptops for our office at a great rate with warranty. Their AMC contract has saved us multiple times already."</div>
+      <div class="testi-author">Priya Nair</div>
+      <div class="testi-role">IT Manager, Tech Solutions Pvt Ltd</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">"Excellent biometric attendance setup across 3 floors of our building. Face recognition works perfectly. Their support team responds within hours — outstanding service."</div>
+      <div class="testi-author">Selvam Arumugam</div>
+      <div class="testi-role">Admin Head, Sri Venkateswara School</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Get in Touch</div>
+  <h2>Request a <span class="accent">Free Quote</span></h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>We're here to help</h3>
+      <p>Reach out for a free site visit, product demo, or customised quotation. Our team typically responds within 2 hours.</p>
+      <div class="contact-item">
+        <div class="contact-item-icon">📞</div>
+        <div>
+          <div style="font-weight:600;">+91 XXXXX XXXXX</div>
+          <div style="font-size:0.8rem;color:var(--muted);">Mon – Sat, 9am – 7pm</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div>
+          <div style="font-weight:600;">info@dafmelio.com</div>
+          <div style="font-size:0.8rem;color:var(--muted);">We reply within 24 hours</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div>
+          <div style="font-weight:600;">Chennai, Tamil Nadu</div>
+          <div style="font-size:0.8rem;color:var(--muted);">On-site service across all zones</div>
+        </div>
+      </div>
+      <div class="contact-btns">
+        <a href="tel:+91XXXXXXXXXX"><button class="btn-primary">📞 Call Now</button></a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><button class="btn-whatsapp">💬 WhatsApp Chat</button></a>
+      </div>
+      <div style="margin-top:1.25rem;">
+        <a href="#contact"><button class="btn-outline">🏠 Request Site Visit</button></a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@company.com">
+      </div>
+      <div class="form-group">
+        <label>Service Required</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Laptop / Desktop Sales</option>
+          <option>CCTV Installation</option>
+          <option>Biometric Systems</option>
+          <option>IT Support / AMC</option>
+          <option>Software Licensing</option>
+          <option>Networking Setup</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message / Requirements</label>
+        <textarea placeholder="Describe your requirement or ask for a quote..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center;">Send Enquiry →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="font-size:1.1rem;">Dafmelio <span style="color:var(--blue-bright);">Digital Hub</span></div>
+      <p>Chennai's trusted partner for premium IT solutions, security systems, and complete digital infrastructure since 2016.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Laptop Sales</a>
+      <a href="#services">CCTV Installation</a>
+      <a href="#services">IT Support &amp; AMC</a>
+      <a href="#services">Biometric Systems</a>
+      <a href="#services">Software Licensing</a>
+      <a href="#services">Networking</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#brands">Brand Partners</a>
+      <a href="#industries">Industries</a>
+      <a href="#testimonials">Client Reviews</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+91995246483">📞 +91 99524 64583</a>
+      <a href="mailto:sales@dafmelio.com">✉️ sales@dafmelio.com</a>
+      <a href="#">📍 Chennai, Tamil Nadu</a>
+      <a href="https://wa.me/919952464583">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Dafmelio Digital Hub. All rights reserved.</span>
+    <span>Smart IT. Secure Future.</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919952464583" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<script>
+  // Smooth counter animation on scroll
+  function animateCounter(el, target, suffix) {
+    let start = 0;
+    const duration = 1800;
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.service-card, .why-item, .product-card, .testi-card, .pillar').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+
+  // Nav scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 40
+      ? 'rgba(5,8,16,0.97)'
+      : 'rgba(5,8,16,0.85)';
+  });
+</script>
+</body>
+</html>
